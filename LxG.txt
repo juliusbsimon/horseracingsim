@@ -1,0 +1,6 @@
+
+Anubis      3 4 0 2 3 9 
+Mj12        3 4 0 3 2 10 
+Exiled      2 4 0 2 5 8
+Osiris      3 4 0 2 6 9
+Morpheus    1 2 0 1 8 4

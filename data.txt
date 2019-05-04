@@ -1,0 +1,6 @@
+
+Phenom    1 2 0 1 3 5 
+MANIAC    3 4 0 3 2 10 
+Panther   1 4 0 1 8 6
+Shadow    2 2 0 2 6 7
+Dominator 2 4 0 2 3 8

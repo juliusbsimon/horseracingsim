@@ -1,0 +1,44 @@
+# Project: Race_Animation
+# Makefile created by Dev-C++ 4.9.9.0
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = Race_Animation_private.res
+OBJ  = main.o animate.o functions.o commentry.o unitsforward.o $(RES)
+LINKOBJ  = main.o animate.o functions.o commentry.o unitsforward.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  -g3 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/include/c++/3.3.1"  -I"C:/Dev-Cpp/include/c++/3.3.1/mingw32"  -I"C:/Dev-Cpp/include/c++/3.3.1/backward"  -I"C:/Dev-Cpp/lib/gcc-lib/mingw32/3.3.1/include"  -I"C:/Dev-Cpp/include" 
+BIN  = Race.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS)   -g3
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Race.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Race.exe" $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+animate.o: animate.c
+	$(CC) -c animate.c -o animate.o $(CFLAGS)
+
+functions.o: functions.c
+	$(CC) -c functions.c -o functions.o $(CFLAGS)
+
+commentry.o: commentry.c
+	$(CC) -c commentry.c -o commentry.o $(CFLAGS)
+
+unitsforward.o: unitsforward.c
+	$(CC) -c unitsforward.c -o unitsforward.o $(CFLAGS)
+
+Race_Animation_private.res: Race_Animation_private.rc 
+	$(WINDRES) -i Race_Animation_private.rc -I rc -o Race_Animation_private.res -O coff 
